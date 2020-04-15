@@ -2,22 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
+    public LayerMask movementMask;
+
+    Camera cam;
+    PlayerMotor motor;
+
+    void Start()
+    {
+        cam = Camera.main;
+        motor = GetComponent<PlayerMotor>();
+    }
 
     void Update()
     {
-        PlayerMovement();
-    }
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
 
-    void PlayerMovement()
-    {
-        float hor = Input.GetAxis("Horizontal");
-        float ver = Input.GetAxis("Vertical");
+            if (Physics.Raycast(ray, out hit, 100, movementMask))
+            {
+                // Move our player to what we hit
+                motor.MoveToPoint(hit.point);
 
-        Vector3 playerMovement = new Vector3(hor, 0f, ver) * speed * Time.deltaTime;
-        transform.Translate(playerMovement, Space.Self);
+                // Stop focusing on any objects
+            }
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                // Check if we hit an interactable
+                // If so, set it as our focus.
+            }
+        }
     }
 }
 

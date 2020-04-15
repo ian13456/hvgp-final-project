@@ -4,27 +4,33 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float rotationSpeed = 1f;
-    public Transform target, player;
-    float mouseX, mouseY;
+    public Transform target;
+
+    public Vector3 offset;
+    public float zoomSpeed = 4f;
+    public float minZoom = 5f;
+    public float maxZoom = 15f;
+
+    public float pitch = 2f;
+
+    public float yawSpeed = 100f;
+
+    private float currentZoom = 10f;
+    private float currentYaw = 0f;
+
+    void Update()
+    {
+        currentZoom -= Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
+        currentZoom = Mathf.Clamp(currentZoom, minZoom, maxZoom);
+
+        currentYaw -= Input.GetAxis("Horizontal") * yawSpeed * Time.deltaTime;
+    }
 
     void LateUpdate()
     {
-        CamControl();
-    }
+        transform.position = target.position - offset * currentZoom;
+        transform.LookAt(target.position + Vector3.up * pitch);
 
-    void CamControl()
-    {
-        mouseX += Input.GetAxis("Mouse X") * rotationSpeed;
-        mouseY -= Input.GetAxis("Mouse Y") * rotationSpeed;
-        mouseY = Mathf.Clamp(mouseY, -35, 60);
-
-        transform.LookAt(target);
-
-        target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
-        if (!Input.GetKey(KeyCode.LeftShift))
-        {
-            player.rotation = Quaternion.Euler(0, mouseX, 0);
-        }
+        transform.RotateAround(target.position, Vector3.up, currentYaw);
     }
 }
