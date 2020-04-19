@@ -5,12 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour
 {
+    [HideInInspector]
+    public bool isMounted = false;
     public Interactable focus;
-
     public LayerMask movementMask;
 
     Camera cam;
     PlayerMotor motor;
+    Mountable mount = null;
 
     void Start()
     {
@@ -27,8 +29,15 @@ public class PlayerController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 100, movementMask))
             {
-                // Move our player to what we hit
-                motor.MoveToPoint(hit.point);
+                if (isMounted)
+                {
+                    mount.MoveToPoint(hit.point);
+                }
+                else
+                {
+                    // Move our player to what we hit
+                    motor.MoveToPoint(hit.point);
+                }
 
                 // Stop focusing on any objects
                 RemoveFocus();
@@ -51,10 +60,17 @@ public class PlayerController : MonoBehaviour
                 // If so, set it as our focus.
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Unmount();
+        }
     }
 
     void SetFocus(Interactable newFocus)
     {
+        Unmount();
+
         if (newFocus != focus)
         {
             if (focus != null)
@@ -74,6 +90,30 @@ public class PlayerController : MonoBehaviour
 
         focus = null;
         motor.StopFollowingTarget();
+    }
+
+    public void Mount(Mountable newParent)
+    {
+        mount = newParent;
+
+        transform.parent = mount.transform;
+        transform.position = mount.transform.position;
+        transform.rotation = mount.transform.rotation;
+
+        motor.StartMounting();
+        RemoveFocus();
+
+        isMounted = true;
+    }
+
+    public void Unmount()
+    {
+        mount = null;
+
+        transform.parent = null;
+        motor.StopMounting();
+
+        isMounted = false;
     }
 }
 

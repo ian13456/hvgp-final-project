@@ -6,6 +6,8 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class PlayerMotor : MonoBehaviour
 {
+    bool isMounted = false;
+
     Transform target;
     NavMeshAgent agent;
 
@@ -17,10 +19,16 @@ public class PlayerMotor : MonoBehaviour
 
     void Update()
     {
-        if (target != null)
+        if (isMounted)
         {
-            agent.SetDestination(target.position);
-            FaceTarget();
+        }
+        else
+        {
+            if (target != null)
+            {
+                agent.SetDestination(target.position);
+                FaceTarget();
+            }
         }
     }
 
@@ -43,6 +51,19 @@ public class PlayerMotor : MonoBehaviour
         agent.updateRotation = true;
 
         target = null;
+    }
+
+    public void StartMounting()
+    {
+        agent.enabled = false;
+        StopFollowingTarget();
+        isMounted = true;
+    }
+
+    public void StopMounting()
+    {
+        agent.enabled = true;
+        isMounted = false;
     }
 
     void FaceTarget()
