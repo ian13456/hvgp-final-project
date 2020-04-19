@@ -7,17 +7,21 @@ using UnityEngine.AI;
 public class WanderController : MonoBehaviour
 {
     public float wanderRadius;
-    public float wanderTimer;
+    public float minWanderTimer;
+    public float maxWanderTimer;
+    public float rotationOffset;
 
     private Vector3 latestPos;
     private Transform target;
     private NavMeshAgent agent;
     private float timer;
+    private float wanderTimer;
     private bool isDisabled = false;
 
     // Use this for initialization
     void OnEnable()
     {
+        wanderTimer = Random.Range(minWanderTimer, maxWanderTimer);
         agent = GetComponent<NavMeshAgent>();
         timer = wanderTimer;
 
@@ -59,9 +63,10 @@ public class WanderController : MonoBehaviour
     void FaceTarget(Vector3 position)
     {
         Vector3 direction = (position - transform.position).normalized;
+        if (direction.magnitude == 0) return;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, direction.y, direction.z));
         Vector3 rot = lookRotation.eulerAngles;
-        rot = new Vector3(rot.x, rot.y - 90, rot.z);
+        rot = new Vector3(rot.x, rot.y - rotationOffset, rot.z);
         lookRotation = Quaternion.Euler(rot);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
