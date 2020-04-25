@@ -7,10 +7,10 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: layer_EA04_LPNP-TinyForest_Colorsheet_v33d3aba195e4d26ee
-  m_DiffuseTexture: {fileID: 2800000, guid: ec2878ae430a7c24eab58a35bd911f7e, type: 3}
-  m_NormalMapTexture: {fileID: 0}
-  m_MaskMapTexture: {fileID: 0}
-  m_TileSize: {x: 15, y: 15}
+  m_DiffuseTexture: {fileID: 2800000, guid: f3c7e12938d22604eb51dc02b394dd80, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: d06c19850ee13bf4086860fd02cf417d, type: 3}
+  m_MaskMapTexture: {fileID: 2800000, guid: f3c7e12938d22604eb51dc02b394dd80, type: 3}
+  m_TileSize: {x: 5, y: 5}
   m_TileOffset: {x: 0, y: 0}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}
   m_Metallic: 0
