@@ -2333,6 +2333,7 @@ GameObject:
   - component: {fileID: 1190466731}
   - component: {fileID: 1190466732}
   - component: {fileID: 1190466730}
+  - component: {fileID: 1190466733}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2476,6 +2477,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   space: 20
   items: []
+--- !u!114 &1190466733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190466728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57df88f2fa4134f8594a6d3351b2c957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1805909482}
 --- !u!1001 &1229917038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3252,7 +3266,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5
+  m_Speed: 6
   m_Acceleration: 13
   avoidancePriority: 50
   m_AngularSpeed: 360
@@ -3886,8 +3900,8 @@ MonoBehaviour:
   - {fileID: 371894809006564901, guid: 7ec67b30742131d49812aa614b81ceef, type: 3}
   hugeDinoPrefabs:
   - {fileID: 6206559014508859729, guid: 95782e8b40ba3a848a85cf0dac3957a0, type: 3}
-  smallDinoCount: 10
-  hugeDinoCount: 5
+  smallDinoCount: 30
+  hugeDinoCount: 15
   dinoSpawnRadius: 100
 --- !u!1001 &3103224149241053466
 PrefabInstance:
