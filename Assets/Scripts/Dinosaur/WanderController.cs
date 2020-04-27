@@ -43,11 +43,12 @@ public class WanderController : MonoBehaviour
                 timer = 0;
                 SetTarget(newPos);
             }
+
+            FaceTarget(latestPos);
         }
-        FaceTarget(latestPos);
     }
 
-    void FaceTarget(Vector3 position)
+    public void FaceTarget(Vector3 position)
     {
         Vector3 direction = (position - transform.position).normalized;
         if (direction.magnitude == 0) return;
