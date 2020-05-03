@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 1993898552708652031}
   - component: {fileID: 8505278028866288368}
   - component: {fileID: 8505278028866288369}
-  - component: {fileID: 371894809006564900}
   - component: {fileID: 7182210564497669579}
+  - component: {fileID: 9132437039811868085}
   - component: {fileID: 3053274673803364000}
   - component: {fileID: 1010599620410945197}
   - component: {fileID: 7195259298402465828}
@@ -132,18 +132,6 @@ MonoBehaviour:
   maxWanderTimer: 4
   rotationOffset: 0
   areaMask: -1
---- !u!114 &371894809006564900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371894809006564901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dca82fd2a6577344dbb7bfbb5fa9fb6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7182210564497669579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +146,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactionTransform: {fileID: 3707137057386337334}
+--- !u!114 &9132437039811868085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371894809006564901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04663140cdee046eaa067476ac50b656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6771274475572279628}
 --- !u!114 &3053274673803364000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ffa4ad5bdb634da7a1906a4922b488c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 1
+  attackRate: 1
+  healthBarPos: {fileID: 0}
 --- !u!114 &1010599620410945197
 MonoBehaviour:
   m_ObjectHideFlags: 0

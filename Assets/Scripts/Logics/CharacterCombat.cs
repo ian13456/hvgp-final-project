@@ -5,10 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterStats))]
 public class CharacterCombat : MonoBehaviour
 {
-    public float attackSpeed = 1f;
-    private float attackCooldown = 0f;
+    public float attackRate = 1f;
+    private float attackCountdown = 0f;
+
+    public event System.Action OnAttack;
 
     CharacterStats myStats;
+    CharacterStats enemyStats;
 
     void Start()
     {
@@ -17,15 +20,32 @@ public class CharacterCombat : MonoBehaviour
 
     void Update()
     {
-        attackCooldown -= Time.deltaTime;
+        attackCountdown -= Time.deltaTime;
     }
 
-    public void Attack(CharacterStats targetStats)
+    public void Attack(CharacterStats enemyStats)
     {
-        if (attackCooldown <= 0f)
+        if (attackCountdown <= 0f)
         {
-            targetStats.TakeDamage(myStats.damage.GetValue());
-            attackCooldown = 1f / attackSpeed;
+            this.enemyStats = enemyStats;
+            attackCountdown = 1f / attackRate;
+
+            StartCoroutine(DoDamage(enemyStats, .6f));
+
+            if (OnAttack != null)
+            {
+                OnAttack();
+            }
         }
+    }
+
+
+    IEnumerator DoDamage(CharacterStats stats, float delay)
+    {
+        print("Start");
+        yield return new WaitForSeconds(delay);
+
+        Debug.Log(transform.name + " swings for " + myStats.damage.GetValue() + " damage");
+        enemyStats.TakeDamage(myStats.damage.GetValue());
     }
 }

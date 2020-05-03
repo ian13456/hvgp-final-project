@@ -16,9 +16,17 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject player;
 
+    Animator animator;
+
+    void Start()
+    {
+        animator = player.GetComponentInChildren<Animator>();
+    }
+
     public void KillPlayer()
     {
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        animator.SetBool("isDead", true);
         Debug.Log("Dead!");
     }
 }

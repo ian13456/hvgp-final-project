@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6881374566794015514}
   - component: {fileID: 3599940106862894688}
-  - component: {fileID: 6651658529684826067}
+  - component: {fileID: 8366704664743841838}
   - component: {fileID: 4724977653432087146}
   - component: {fileID: 7751615412123092667}
   - component: {fileID: 1241695661356595919}
@@ -60,7 +60,7 @@ Animator:
   m_HasTransformHierarchy: 0
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6651658529684826067
+--- !u!114 &8366704664743841838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,9 +69,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7576414039702290697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dca82fd2a6577344dbb7bfbb5fa9fb6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 04663140cdee046eaa067476ac50b656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 3599940106862894688}
 --- !u!114 &4724977653432087146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ffa4ad5bdb634da7a1906a4922b488c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 1
+  attackRate: 1
+  healthBarPos: {fileID: 0}
 --- !u!1 &8482924619350358348
 GameObject:
   m_ObjectHideFlags: 0

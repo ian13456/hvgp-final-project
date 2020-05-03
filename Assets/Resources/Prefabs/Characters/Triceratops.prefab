@@ -103,10 +103,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6951720896521986882}
   - component: {fileID: 1077339509677280824}
+  - component: {fileID: 9098186316053720930}
   - component: {fileID: 8425348274181680375}
   - component: {fileID: -4618247318612003409}
   - component: {fileID: 991792751}
-  - component: {fileID: 8296172668104513639}
   - component: {fileID: 3710194760455715375}
   - component: {fileID: 5599829413181007659}
   m_Layer: 0
@@ -151,6 +151,19 @@ Animator:
   m_HasTransformHierarchy: 0
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9098186316053720930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6206559014508859729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04663140cdee046eaa067476ac50b656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1077339509677280824}
 --- !u!195 &8425348274181680375
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -205,18 +218,7 @@ MonoBehaviour:
   minWanderTimer: 5
   maxWanderTimer: 12
   rotationOffset: 0
---- !u!114 &8296172668104513639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6206559014508859729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dca82fd2a6577344dbb7bfbb5fa9fb6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  areaMask: -1
 --- !u!114 &3710194760455715375
 MonoBehaviour:
   m_ObjectHideFlags: 0

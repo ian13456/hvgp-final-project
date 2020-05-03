@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 4793161787837125976}
   - component: {fileID: 4793161787837125979}
   - component: {fileID: 4793161787837125978}
-  - component: {fileID: 1591995213119700226}
+  - component: {fileID: 2239757216731724301}
   - component: {fileID: 7848817408472946678}
   - component: {fileID: 3772159218199035096}
   m_Layer: 0
@@ -293,7 +293,7 @@ MonoBehaviour:
     baseValue: 5
   armor:
     baseValue: 2
---- !u!114 &1591995213119700226
+--- !u!114 &2239757216731724301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -302,9 +302,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3577360406521686982}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dca82fd2a6577344dbb7bfbb5fa9fb6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 04663140cdee046eaa067476ac50b656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 7598712005960660143}
 --- !u!114 &7848817408472946678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ffa4ad5bdb634da7a1906a4922b488c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 2
+  attackRate: 1
 --- !u!114 &3772159218199035096
 MonoBehaviour:
   m_ObjectHideFlags: 0
