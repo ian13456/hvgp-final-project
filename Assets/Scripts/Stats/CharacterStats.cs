@@ -45,6 +45,7 @@ public class CharacterStats : MonoBehaviour
     public void AddHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        OnHealthChanged(maxHealth, currentHealth);
     }
 
     public virtual void Die()
