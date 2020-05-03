@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5880871071471166447}
   - component: {fileID: 2813191379559691816}
   - component: {fileID: 2744096705513555420}
-  - component: {fileID: 1684096129}
   m_Layer: 0
   m_Name: Interactable
   m_TagString: Untagged
@@ -94,23 +93,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1684096129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1559149075137740872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eae2deb6c73dfd84189e9a364b495b64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 3
-  interactionTransform: {fileID: 7495083585122905792}
-  playerController: {fileID: 0}
-  wanderController: {fileID: 991792751}
-  navMeshAgent: {fileID: 8425348274181680375}
 --- !u!1 &6206559014508859729
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +107,8 @@ GameObject:
   - component: {fileID: -4618247318612003409}
   - component: {fileID: 991792751}
   - component: {fileID: 8296172668104513639}
+  - component: {fileID: 3710194760455715375}
+  - component: {fileID: 5599829413181007659}
   m_Layer: 0
   m_Name: Triceratops
   m_TagString: Untagged
@@ -187,7 +171,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 7
   m_ObstacleAvoidanceType: 4
 --- !u!54 &-4618247318612003409
 Rigidbody:
@@ -220,7 +204,7 @@ MonoBehaviour:
   wanderRadius: 5
   minWanderTimer: 5
   maxWanderTimer: 12
-  rotationOffset: 90
+  rotationOffset: 0
 --- !u!114 &8296172668104513639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +217,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca82fd2a6577344dbb7bfbb5fa9fb6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3710194760455715375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6206559014508859729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03844020887884e798379696f4484218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSources:
+  - {fileID: 8300000, guid: a11a3ba88e474430995c5d829960febe, type: 3}
+  minSoundDelay: 5
+  maxSoundDelay: 69
+--- !u!114 &5599829413181007659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6206559014508859729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eae2deb6c73dfd84189e9a364b495b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3
+  interactionTransform: {fileID: 7495083585122905792}
+  playerController: {fileID: 0}
+  wanderController: {fileID: 991792751}
+  navMeshAgent: {fileID: 8425348274181680375}
 --- !u!1 &6600717264391002120
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,16 +31,16 @@ public class SpawnSystem : MonoBehaviour
         for (int i = 0; i < smallDinoCount; i++)
         {
             Vector3 randomPosition = Helpers.GetRandomNavPosition(dinoSpawnCenter.position, dinoSpawnRadius, -1);
-
             GameObject newSmallDino = Instantiate(GetRandomSmallDinoPrefab(), randomPosition, Quaternion.identity, dinoParent);
+
             smallDinos.Add(newSmallDino);
         }
 
         for (int i = 0; i < hugeDinoCount; i++)
         {
             Vector3 randomPosition = Helpers.GetRandomNavPosition(dinoSpawnCenter.position, dinoSpawnRadius, -1);
-
             GameObject newHugeDino = Instantiate(GetRandomHugeDinoPrefab(), randomPosition, Quaternion.identity, dinoParent);
+
             hugeDinos.Add(newHugeDino);
         }
     }

@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a387487b69dad274db535f571127cee6, type: 3}
-  m_Name: Helmet
+  m_Script: {fileID: 11500000, guid: e2984bc301c554d2db48a985026f97df, type: 3}
+  m_Name: FieldDisruptor
   m_EditorClassIdentifier: 
-  name: Helmet of Protection
-  icon: {fileID: 21300000, guid: dc87e4655a26e5f418a364da853b1103, type: 3}
+  name: Field Disruptor
+  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   isDefaultItem: 0
+  essentialSlot: 0

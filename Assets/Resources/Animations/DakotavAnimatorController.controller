@@ -35,7 +35,7 @@ BlendTree:
   m_Name: Locomation
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: -4513156848700717648, guid: e8487009f25727d4ebd9b7d6e9d4e59f,
+    m_Motion: {fileID: -8945691123924629249, guid: e8487009f25727d4ebd9b7d6e9d4e59f,
       type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
@@ -44,7 +44,7 @@ BlendTree:
     m_DirectBlendParameter: speedPercent
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -8462699443042018354, guid: e8487009f25727d4ebd9b7d6e9d4e59f,
+    m_Motion: {fileID: -7551964380084998518, guid: e8487009f25727d4ebd9b7d6e9d4e59f,
       type: 3}
     m_Threshold: 0.3
     m_Position: {x: 0, y: 0}
@@ -98,7 +98,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -1775155110888070845}
-    m_Position: {x: 281.65613, y: 129.74857, z: 0}
+    m_Position: {x: 280, y: 130, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

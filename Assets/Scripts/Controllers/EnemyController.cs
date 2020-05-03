@@ -30,7 +30,7 @@ public class EnemyController : MonoBehaviour
 
             if (distance <= agent.stoppingDistance)
             {
-                CharacterStats targetStats = target.GetComponent<CharacterStats>();
+                PlayerStats targetStats = target.GetComponent<PlayerStats>();
                 if (targetStats != null)
                 {
                     combat.Attack(targetStats);

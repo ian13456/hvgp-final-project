@@ -8,6 +8,11 @@ public class Mountable : Interactable
     public WanderController wanderController;
     public NavMeshAgent navMeshAgent;
 
+    void Start()
+    {
+        playerController = PlayerManager.instance.player.GetComponent<PlayerController>();
+    }
+
     public override void Interact()
     {
         base.Interact();

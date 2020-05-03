@@ -10,6 +10,7 @@ public class WanderController : MonoBehaviour
     public float minWanderTimer;
     public float maxWanderTimer;
     public float rotationOffset;
+    public int areaMask = -1;
 
     private Vector3 latestPos;
     private Transform target;
@@ -25,6 +26,8 @@ public class WanderController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         timer = wanderTimer;
 
+        agent.GetComponent<NavMeshAgent>().Warp(agent.transform.position);
+
         agent.updateRotation = false;
     }
 
@@ -38,8 +41,12 @@ public class WanderController : MonoBehaviour
 
             if (timer >= wanderTimer)
             {
-                Vector3 newPos = Helpers.GetRandomNavPosition(transform.position, wanderRadius, -1);
-                agent.SetDestination(newPos);
+                Vector3 newPos = Helpers.GetRandomNavPosition(transform.position, wanderRadius, areaMask);
+                try
+                {
+                    agent.SetDestination(newPos);
+                }
+                catch { }
                 timer = 0;
                 SetTarget(newPos);
             }
