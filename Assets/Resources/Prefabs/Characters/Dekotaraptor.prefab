@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 959011668442085844}
   m_Layer: 0
   m_Name: Dekotaraptor
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,10 +73,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.5840994
-  m_Height: 3.6316314
+  m_Radius: 4
+  m_Height: 6.39496
   m_Direction: 2
-  m_Center: {x: 0.07447958, y: 0.5296369, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1993898552708652031
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -171,8 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ffa4ad5bdb634da7a1906a4922b488c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRate: 1
-  healthBarPos: {fileID: 0}
+  attackRate: 2
 --- !u!114 &1010599620410945197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adad522d17ff24bd183b9b867b2af79a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 60
   damage:
     baseValue: 3
   armor:
@@ -210,7 +209,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371894809006564901}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03844020887884e798379696f4484218, type: 3}
   m_Name: 

@@ -10,26 +10,24 @@ public class CharacterStats : MonoBehaviour
 
     public event System.Action<int, int> OnHealthChanged;
 
+    Rigidbody rb;
+
     void Awake()
     {
         currentHealth = maxHealth;
     }
 
-    void Update()
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            TakeDamage(10);
-        }
+        rb = GetComponent<Rigidbody>();
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, GameObject hitter)
     {
         damage -= armor.GetValue();
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
 
         currentHealth -= damage;
-        Debug.Log(transform.name + " takes " + damage + " damage.");
 
         if (OnHealthChanged != null)
         {

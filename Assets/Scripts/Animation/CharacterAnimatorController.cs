@@ -14,7 +14,8 @@ public class CharacterAnimatorController : MonoBehaviour
     {
         navmeshAgent = GetComponent<NavMeshAgent>();
         combat = GetComponent<CharacterCombat>();
-        combat.OnAttack += OnAttack;
+        if (combat != null)
+            combat.OnAttack += OnAttack;
     }
 
     protected virtual void Update()

@@ -19,12 +19,9 @@ public class Enemy : Interactable
         base.Interact();
         CharacterCombat playerCombat = playerManager.player.GetComponent<CharacterCombat>();
 
-        Debug.Log("damn");
-
         if (playerCombat != null)
         {
             playerCombat.Attack(myStats);
         }
-        // Attack the enemy
     }
 }
