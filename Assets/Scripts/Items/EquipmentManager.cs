@@ -14,6 +14,7 @@ public class EquipmentManager : MonoBehaviour
     #endregion
 
     public SkinnedMeshRenderer targetMesh;
+    public Transform sword;
 
     Equipment[] currentEquipment;
     SkinnedMeshRenderer[] currentMeshes;
@@ -49,12 +50,18 @@ public class EquipmentManager : MonoBehaviour
 
         currentEquipment[slotIndex] = newItem;
         SkinnedMeshRenderer newMesh = Instantiate(newItem.mesh) as SkinnedMeshRenderer;
-        newMesh.transform.parent = targetMesh.transform;
 
-        newMesh.bones = targetMesh.bones;
-        newMesh.rootBone = targetMesh.rootBone;
+        if (newItem != null && newItem.equipSlot == EquipmentSlot.Weapon)
+        {
+            newMesh.rootBone = sword;
+        }
+        else
+        {
+            newMesh.transform.parent = targetMesh.transform;
+            newMesh.bones = targetMesh.bones;
+            newMesh.rootBone = targetMesh.rootBone;
+        }
         currentMeshes[slotIndex] = newMesh;
-        Debug.Log(newMesh);
     }
 
     public void Unequip(int slotIndex)

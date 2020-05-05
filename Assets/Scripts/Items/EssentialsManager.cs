@@ -24,6 +24,8 @@ public class EssentialsManager : MonoBehaviour
     {
         essentialsCount++;
 
+        Debug.Log("FUCK");
+
         if (essentialsCount == essentialsRequirement)
         {
             Destroy(forceField.gameObject);
