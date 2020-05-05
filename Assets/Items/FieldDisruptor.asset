@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FieldDisruptor
   m_EditorClassIdentifier: 
   name: Field Disruptor
-  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: 286e5aa46188847f2a961d0ecfcac0be, type: 3}
   isDefaultItem: 0
   essentialSlot: 0

@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3777060620518161673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8488977913926506213}
+  m_Layer: 0
+  m_Name: HealthUITarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8488977913926506213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3777060620518161673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6881374566794015514}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7576414039702290697
 GameObject:
   m_ObjectHideFlags: 0
@@ -19,6 +49,7 @@ GameObject:
   - component: {fileID: 7495097372182992094}
   - component: {fileID: 8601461350818758131}
   - component: {fileID: 5359546534691815725}
+  - component: {fileID: 122074421362596398}
   m_Layer: 0
   m_Name: Rex
   m_TagString: Enemy
@@ -38,6 +69,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 3792022638345553967}
+  - {fileID: 8488977913926506213}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -114,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 200
   damage:
-    baseValue: 10
+    baseValue: 20
   armor:
     baseValue: 5
 --- !u!195 &598722985162967663
@@ -199,6 +231,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRate: 1
+--- !u!114 &122074421362596398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7576414039702290697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df59bdea7214b433b931d003415a2f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiPrefab: {fileID: 8786633577631914196, guid: 71d01f1ac3c2c460fa5cec38484d04b4,
+    type: 3}
+  target: {fileID: 8488977913926506213}
 --- !u!1 &8482924619350358348
 GameObject:
   m_ObjectHideFlags: 0
