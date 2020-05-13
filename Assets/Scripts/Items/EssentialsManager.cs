@@ -20,6 +20,9 @@ public class EssentialsManager : MonoBehaviour
     public Transform rex;
     public TextMeshProUGUI countText;
     public TextMeshProUGUI releaseText;
+    public AudioClip bossLevel;
+    public AudioSource bgm;
+    public InventoryUI inventory;
     public Vector3 offset;
 
     PlayerManager playerManager;
@@ -56,8 +59,11 @@ public class EssentialsManager : MonoBehaviour
         cameraController.isTransitioning = true;
         cameraController.transform.position = rex.transform.position + offset;
         cameraController.transform.LookAt(rex.position);
+        bgm.clip = bossLevel;
+        bgm.Play();
+        inventory.Toggle();
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         Destroy(forceField.gameObject);
         rex.GetComponent<NavMeshAgent>().enabled = true;

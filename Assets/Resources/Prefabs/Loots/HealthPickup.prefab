@@ -4830,7 +4830,7 @@ GameObject:
   - component: {fileID: 7276555674982159391}
   - component: {fileID: 5618104444607243795}
   m_Layer: 0
-  m_Name: HealthPickup 1
+  m_Name: HealthPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4879,8 +4879,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactionTransform: {fileID: 1501496982475893510}
-  minHealthModifier: 10
-  maxHealthModifier: 30
+  minHealthModifier: 100
+  maxHealthModifier: 200
 --- !u!1 &1503036727298287098
 GameObject:
   m_ObjectHideFlags: 0

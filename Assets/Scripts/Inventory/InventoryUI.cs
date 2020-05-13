@@ -19,7 +19,7 @@ public class InventoryUI : MonoBehaviour
     {
         if (Input.GetButtonDown("Inventory"))
         {
-            inventoryUI.SetActive(!inventoryUI.activeSelf);
+            Toggle();
             UpdateUI();
         }
     }
@@ -39,5 +39,10 @@ public class InventoryUI : MonoBehaviour
                 slots[i].ClearSlot();
             }
         }
+    }
+
+    public void Toggle()
+    {
+        inventoryUI.SetActive(!inventoryUI.activeSelf);
     }
 }
