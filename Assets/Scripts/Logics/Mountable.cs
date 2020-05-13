@@ -26,14 +26,14 @@ public class Mountable : Interactable
     void MountPlayer()
     {
         playerController.Mount(this);
-
+        navMeshAgent.updateRotation = true;
         wanderController.Disable();
     }
 
     void UnmountPlayer()
     {
         playerController.Unmount();
-
+        navMeshAgent.updateRotation = false;
         wanderController.Enable();
     }
 

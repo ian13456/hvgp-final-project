@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [HideInInspector]
+    public bool isDead = false;
     public bool isMounted = false;
     public float mountRotationOffset = 90f;
     public float mountPositionOffset = 1f;
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
+        if (EventSystem.current.IsPointerOverGameObject() || isDead)
             return;
 
         if (Input.GetMouseButtonDown(0))
@@ -123,6 +124,11 @@ public class PlayerController : MonoBehaviour
         motor.StopMounting();
 
         isMounted = false;
+    }
+
+    public void SetDead()
+    {
+        isDead = true;
     }
 }
 

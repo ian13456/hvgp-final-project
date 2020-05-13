@@ -186,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 60
   damage:
-    baseValue: 3
+    baseValue: 6
   armor:
     baseValue: 3
 --- !u!114 &7195259298402465828
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371894809006564901}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03844020887884e798379696f4484218, type: 3}
   m_Name: 

@@ -15,6 +15,9 @@ public class CameraController : MonoBehaviour
 
     public float yawSpeed = 100f;
 
+    [HideInInspector]
+    public bool isTransitioning = false;
+
     private float currentZoom = 10f;
     private float currentYaw = 0f;
 
@@ -28,6 +31,8 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()
     {
+        if (isTransitioning) return;
+
         transform.position = target.position - offset * currentZoom;
         transform.LookAt(target.position + Vector3.up * pitch);
 

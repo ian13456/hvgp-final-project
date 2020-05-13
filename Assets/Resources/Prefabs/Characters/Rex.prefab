@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 8601461350818758131}
   - component: {fileID: 5359546534691815725}
   - component: {fileID: 122074421362596398}
+  - component: {fileID: 7973340087627360623}
   m_Layer: 0
   m_Name: Rex
   m_TagString: Enemy
@@ -144,9 +145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adad522d17ff24bd183b9b867b2af79a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 300
   damage:
-    baseValue: 20
+    baseValue: 50
   armor:
     baseValue: 5
 --- !u!195 &598722985162967663
@@ -246,6 +247,22 @@ MonoBehaviour:
   uiPrefab: {fileID: 8786633577631914196, guid: 71d01f1ac3c2c460fa5cec38484d04b4,
     type: 3}
   target: {fileID: 8488977913926506213}
+--- !u!114 &7973340087627360623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7576414039702290697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03844020887884e798379696f4484218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSources:
+  - {fileID: 8300000, guid: 1e8a17c93310c45e9b8f7c93526db44a, type: 3}
+  minSoundDelay: 10
+  maxSoundDelay: 20
 --- !u!1 &8482924619350358348
 GameObject:
   m_ObjectHideFlags: 0

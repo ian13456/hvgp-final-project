@@ -27,6 +27,15 @@ public class PlayerManager : MonoBehaviour
     {
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         animator.SetBool("isDead", true);
-        Debug.Log("Dead!");
+        player.GetComponent<PlayerController>().SetDead();
+
+        StartCoroutine(PlayerDeath());
+    }
+
+    IEnumerator PlayerDeath()
+    {
+        yield return new WaitForSeconds(5f);
+        // Change Scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

@@ -15,6 +15,7 @@ public class EquipmentManager : MonoBehaviour
 
     public SkinnedMeshRenderer targetMesh;
     public Transform sword;
+    public Transform chestplate;
 
     Equipment[] currentEquipment;
     SkinnedMeshRenderer[] currentMeshes;
@@ -55,6 +56,10 @@ public class EquipmentManager : MonoBehaviour
         {
             newMesh.rootBone = sword;
         }
+        // else if (newItem != null && newItem.equipSlot == EquipmentSlot.Chest)
+        // {
+        //     newMesh.rootBone = chestplate;
+        // }
         else
         {
             newMesh.transform.parent = targetMesh.transform;
