@@ -36,6 +36,9 @@ ModelImporter:
   - first:
       74: 1024189578883078683
     second: character|attack
+  - first:
+      74: -5503175609679131455
+    second: character|sit ?
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -95,11 +98,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: character|sit?
-      takeName: metarig|metarigAction
+      name: character|sit ?
+      takeName: metarig|Sit
       internalID: 0
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

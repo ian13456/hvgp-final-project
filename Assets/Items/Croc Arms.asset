@@ -15,8 +15,10 @@ MonoBehaviour:
   name: Croc Arms
   icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   isDefaultItem: 0
-  equipSlot: 2
+  equipSlot: 4
   mesh: {fileID: 275749767845101723, guid: e044face4ed63483eb3055d11992e857, type: 3}
   coveredMeshRegions: 01000000
+  lootPrefab: {fileID: 6997694544458317424, guid: e044face4ed63483eb3055d11992e857,
+    type: 3}
   armorModifier: 4
-  damageModifier: 1
+  damageModifier: 0

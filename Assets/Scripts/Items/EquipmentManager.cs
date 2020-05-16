@@ -92,7 +92,7 @@ public class EquipmentManager : MonoBehaviour
                 newMesh.bones = targetMesh.bones;
                 newMesh.rootBone = legs;
             }
-            else if (newItem != null && newItem.equipSlot == EquipmentSlot.Headband)
+            else if (newItem != null && (newItem.equipSlot == EquipmentSlot.Headband || newItem.equipSlot == EquipmentSlot.Shades || newItem.equipSlot == EquipmentSlot.Crown))
             {
 
                 newMesh.transform.parent = targetMesh.transform;

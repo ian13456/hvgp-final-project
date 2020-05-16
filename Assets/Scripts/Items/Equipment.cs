@@ -8,6 +8,7 @@ public class Equipment : Item
     public EquipmentSlot equipSlot;
     public SkinnedMeshRenderer mesh;
     public EquipmentMeshRegion[] coveredMeshRegions;
+    public GameObject lootPrefab;
 
     public int armorModifier;
     public int damageModifier;
@@ -19,5 +20,5 @@ public class Equipment : Item
     }
 }
 
-public enum EquipmentSlot { Headband, Chest, Arms, Legs, Weapon, Shield, Feet }
+public enum EquipmentSlot { Crown, Shades, Headband, Chest, Arms, Legs, Weapon, Shield, Feet }
 public enum EquipmentMeshRegion { Torso, Arms, Legs } // corresponds to body blend shape

@@ -18,5 +18,7 @@ MonoBehaviour:
   equipSlot: 4
   mesh: {fileID: 6878600480402366727, guid: 3e24f110580ce45f5a400d8fd40c7a86, type: 3}
   coveredMeshRegions: 
+  lootPrefab: {fileID: 7132546173837028720, guid: 3e24f110580ce45f5a400d8fd40c7a86,
+    type: 3}
   armorModifier: 0
   damageModifier: 30

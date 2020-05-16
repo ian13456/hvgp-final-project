@@ -15,8 +15,10 @@ MonoBehaviour:
   name: Croc Legs
   icon: {fileID: 21300000, guid: 0a192e3a798847a429d81c5e22e49ae7, type: 3}
   isDefaultItem: 0
-  equipSlot: 3
+  equipSlot: 5
   mesh: {fileID: 5578427022486135983, guid: 5068e0679bf0945aaae72105f7739586, type: 3}
   coveredMeshRegions: 00000000
+  lootPrefab: {fileID: 8544379395174018411, guid: 5068e0679bf0945aaae72105f7739586,
+    type: 3}
   armorModifier: 6
-  damageModifier: 1
+  damageModifier: 0
