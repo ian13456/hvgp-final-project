@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 40
+  target: {fileID: 0}
 --- !u!114 &7751615412123092667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1109ae83bba0e4f43a0a28a315998ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
+  radius: 8
   interactionTransform: {fileID: 6881374566794015514}
 --- !u!114 &1241695661356595919
 MonoBehaviour:
@@ -232,6 +233,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRate: 1
+  weaponSFX: {fileID: 0}
+  punchSFX: {fileID: 0}
 --- !u!114 &122074421362596398
 MonoBehaviour:
   m_ObjectHideFlags: 0
