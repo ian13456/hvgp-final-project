@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: Shell Crown
   m_EditorClassIdentifier: 
   name: Shell Crown
-  icon: {fileID: 21300000, guid: ce3c878976a354fc29625888d060ba92, type: 3}
+  icon: {fileID: 21300000, guid: d8e297aad3a634ebd8126b9088ff3f86, type: 3}
   isDefaultItem: 0
   equipSlot: 0
   mesh: {fileID: 942886307347061423, guid: 077898b42364f4951a4ba3bf801aed57, type: 3}
   coveredMeshRegions: 
-  lootPrefab: {fileID: 5429296000159757271, guid: 077898b42364f4951a4ba3bf801aed57,
-    type: 3}
   armorModifier: 5
   damageModifier: 0

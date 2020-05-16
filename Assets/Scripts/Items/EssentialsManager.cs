@@ -25,13 +25,15 @@ public class EssentialsManager : MonoBehaviour
     public AudioSource trexReleaseSFX;
     public InventoryUI inventory;
     public Vector3 offset;
+    public Light directionalLight;
 
     PlayerManager playerManager;
     CameraController cameraController;
 
     int essentialsCount = 0;
     string baseCountText = "";
-    string releaseMessage = "T-REX BOSS RELEASED!";
+    string releaseMessage = "¡BOSS FIGHT!";
+    bool isBossDefeated = false;
 
     void Start()
     {
@@ -39,6 +41,14 @@ public class EssentialsManager : MonoBehaviour
         cameraController = Camera.main.gameObject.GetComponent<CameraController>();
 
         UpdateCounts();
+    }
+
+    void Update()
+    {
+        if (isBossDefeated)
+        {
+            directionalLight.intensity = Mathf.Lerp(directionalLight.intensity, 0.2f, 0.6f);
+        }
     }
 
     public void Apply(Essential newItem)
@@ -72,6 +82,7 @@ public class EssentialsManager : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
 
+        isBossDefeated = true;
         cameraController.isTransitioning = false;
     }
 

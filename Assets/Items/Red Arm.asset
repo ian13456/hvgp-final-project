@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: Red Arm
   m_EditorClassIdentifier: 
   name: Red Arm
-  icon: {fileID: 21300000, guid: b5eb95266cf334d6e839c49bd01794e9, type: 3}
+  icon: {fileID: 21300000, guid: 0867e9ea4462c4dda9415c33a9799510, type: 3}
   isDefaultItem: 0
   equipSlot: 4
   mesh: {fileID: 8442410002496486287, guid: 4090096b13b1e4585995db9d14a21e7f, type: 3}
   coveredMeshRegions: 
-  lootPrefab: {fileID: 7356756675441868494, guid: 4090096b13b1e4585995db9d14a21e7f,
-    type: 3}
   armorModifier: 6
   damageModifier: 0

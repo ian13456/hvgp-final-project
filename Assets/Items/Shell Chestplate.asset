@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: Shell Chestplate
   m_EditorClassIdentifier: 
   name: Shell Chestplate
-  icon: {fileID: 21300000, guid: dc87e4655a26e5f418a364da853b1103, type: 3}
+  icon: {fileID: 21300000, guid: 0db4168c70c474256b43cf8bd5fa4575, type: 3}
   isDefaultItem: 0
   equipSlot: 3
   mesh: {fileID: 2909235173323279591, guid: 915edf2c366694247884eff01e34e448, type: 3}
   coveredMeshRegions: 02000000
-  lootPrefab: {fileID: 8572564746709784949, guid: 915edf2c366694247884eff01e34e448,
-    type: 3}
   armorModifier: 20
   damageModifier: 0

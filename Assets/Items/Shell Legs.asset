@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: Shell Legs
   m_EditorClassIdentifier: 
   name: Shell Legs
-  icon: {fileID: 21300000, guid: ce3c878976a354fc29625888d060ba92, type: 3}
+  icon: {fileID: 21300000, guid: 54ea40f0258cf4a1eb0cc7ebf82b30c0, type: 3}
   isDefaultItem: 0
   equipSlot: 5
   mesh: {fileID: 7409230110796745665, guid: e4a7f5675c530403080791d2050ff580, type: 3}
   coveredMeshRegions: 
-  lootPrefab: {fileID: 257247487092934445, guid: e4a7f5675c530403080791d2050ff580,
-    type: 3}
   armorModifier: 11
   damageModifier: 0

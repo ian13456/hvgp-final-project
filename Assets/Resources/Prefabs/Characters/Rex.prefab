@@ -146,13 +146,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adad522d17ff24bd183b9b867b2af79a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
+  maxHealth: 150
   damage:
-    baseValue: 80
+    baseValue: 70
   armor:
     baseValue: 30
-  dropRate: 0.5
-  drop: []
+  dropRate: 1
+  drop:
+  - {fileID: 6611774275871055667, guid: 462ada235895e4f3fa349d390dbcf587, type: 3}
 --- !u!195 &598722985162967663
 NavMeshAgent:
   m_ObjectHideFlags: 0

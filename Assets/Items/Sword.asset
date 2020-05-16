@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   name: Sword
-  icon: {fileID: 21300000, guid: c86bdc25af1fb49e382ab36c04d5c5af, type: 3}
+  icon: {fileID: 21300000, guid: b4d2976449a3c43a3af2bbefec2a1001, type: 3}
   isDefaultItem: 0
   equipSlot: 6
   mesh: {fileID: 6878600480402366727, guid: 3e24f110580ce45f5a400d8fd40c7a86, type: 3}
   coveredMeshRegions: 
-  lootPrefab: {fileID: 7132546173837028720, guid: 3e24f110580ce45f5a400d8fd40c7a86,
-    type: 3}
   armorModifier: 0
   damageModifier: 30

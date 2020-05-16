@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Croc Arms
   m_EditorClassIdentifier: 
   name: Croc Arms
-  icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: 78e0d1da5a17d4dcba85f73245d1c9c9, type: 3}
   isDefaultItem: 0
   equipSlot: 4
   mesh: {fileID: 275749767845101723, guid: e044face4ed63483eb3055d11992e857, type: 3}
