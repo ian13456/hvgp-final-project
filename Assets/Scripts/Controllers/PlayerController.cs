@@ -34,28 +34,6 @@ public class PlayerController : MonoBehaviour
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 100, movementMask))
-            {
-                if (isMounted)
-                {
-                    mount.MoveToPoint(hit.point);
-                }
-                else
-                {
-                    // Move our player to what we hit
-                    motor.MoveToPoint(hit.point);
-                }
-
-                // Stop focusing on any objects
-                RemoveFocus();
-            }
-        }
-
-        if (Input.GetMouseButtonDown(1))
-        {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
             if (Physics.Raycast(ray, out hit, 100))
             {
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
@@ -63,9 +41,26 @@ public class PlayerController : MonoBehaviour
                 {
                     SetFocus(interactable);
                 }
+                else if (Physics.Raycast(ray, out hit, 100, movementMask))
+                {
+                    if (isMounted)
+                    {
+                        mount.MoveToPoint(hit.point);
+                    }
+                    else
+                    {
+                        // Move our player to what we hit
+                        motor.MoveToPoint(hit.point);
+                    }
+
+                    // Stop focusing on any objects
+                    RemoveFocus();
+                }
                 // Check if we hit an interactable
                 // If so, set it as our focus.
             }
+
+
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
