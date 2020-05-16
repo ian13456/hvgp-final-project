@@ -222,10 +222,10 @@ ModelImporter:
     clipAnimations:
     - serializedVersion: 16
       name: ankylosaurus|idle
-      takeName: Armature|ArmatureAction
+      takeName: Armature|Idle
       internalID: 0
       firstFrame: 0
-      lastFrame: 66
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -280,10 +280,10 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: ankylosaurus|walk
-      takeName: Armature|walk
+      takeName: Armature|Walk
       internalID: 0
       firstFrame: 0
-      lastFrame: 36
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
