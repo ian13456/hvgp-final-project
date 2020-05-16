@@ -207,10 +207,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.46051455
-  m_Height: 5.7277603
+  m_Radius: 1.0092691
+  m_Height: 8.345686
   m_Direction: 0
-  m_Center: {x: -0.09722519, y: 0.65765333, z: 0}
+  m_Center: {x: 0, y: 0.8828034, z: 0}
 --- !u!195 &4793161787837125954
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -248,7 +248,7 @@ MonoBehaviour:
   wanderRadius: 50
   minWanderTimer: 2
   maxWanderTimer: 6
-  rotationOffset: 0
+  rotationOffset: -90
   areaMask: -1
 --- !u!114 &4793161787837125976
 MonoBehaviour:
@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 10
+  target: {fileID: 0}
 --- !u!114 &4793161787837125979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,6 +295,12 @@ MonoBehaviour:
     baseValue: 30
   armor:
     baseValue: 2
+  dropRate: 0.9
+  drop:
+  - {fileID: 2632419781198814813, guid: 3fde4bf3bcdb24b2fb60202fb7af29e3, type: 3}
+  - {fileID: 5608369147082976032, guid: 7a3aefa7d24024458bb751ebb7dfb1cc, type: 3}
+  - {fileID: 1825818086670070775, guid: 0f0323d636e534240bc78d33e1d4497b, type: 3}
+  - {fileID: 2089035604210942412, guid: 69fa3077990de4831a88a3d20fdeaec2, type: 3}
 --- !u!114 &2239757216731724301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,6 +327,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRate: 1
+  weaponSFX: {fileID: 0}
+  punchSFX: {fileID: 0}
 --- !u!114 &3772159218199035096
 MonoBehaviour:
   m_ObjectHideFlags: 0

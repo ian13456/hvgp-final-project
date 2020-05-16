@@ -148,9 +148,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 300
   damage:
-    baseValue: 50
+    baseValue: 80
   armor:
-    baseValue: 5
+    baseValue: 30
+  dropRate: 0.5
+  drop: []
 --- !u!195 &598722985162967663
 NavMeshAgent:
   m_ObjectHideFlags: 0

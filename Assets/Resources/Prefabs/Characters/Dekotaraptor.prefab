@@ -172,6 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRate: 2
+  weaponSFX: {fileID: 0}
+  punchSFX: {fileID: 0}
 --- !u!114 &1010599620410945197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +191,23 @@ MonoBehaviour:
     baseValue: 6
   armor:
     baseValue: 3
+  dropRate: 0.2
+  drop:
+  - {fileID: 6908704499951111780, guid: 58c00d758fcc3467286e69453fa3fb56, type: 3}
+  - {fileID: 440720632177757752, guid: 3d0a094d65a66459a83b8ac6a9f4f603, type: 3}
+  - {fileID: 7795366160295909797, guid: f491e2c49c62942e7953afb778b05634, type: 3}
+  - {fileID: 8445747134953707008, guid: bfb07c4f162ed414abc4596c087d75ab, type: 3}
+  - {fileID: 2632419781198814813, guid: 3fde4bf3bcdb24b2fb60202fb7af29e3, type: 3}
+  - {fileID: 5608369147082976032, guid: 7a3aefa7d24024458bb751ebb7dfb1cc, type: 3}
+  - {fileID: 1825818086670070775, guid: 0f0323d636e534240bc78d33e1d4497b, type: 3}
+  - {fileID: 2089035604210942412, guid: 69fa3077990de4831a88a3d20fdeaec2, type: 3}
+  - {fileID: 1926556218664441711, guid: 89a384bc8ee144811841a0040dbcebab, type: 3}
+  - {fileID: 8336435760349707588, guid: 567ec9cbd62d24be69e17b3ea0c85f7a, type: 3}
+  - {fileID: 5608369147082976032, guid: 7a3aefa7d24024458bb751ebb7dfb1cc, type: 3}
+  - {fileID: 5608369147082976032, guid: 7a3aefa7d24024458bb751ebb7dfb1cc, type: 3}
+  - {fileID: 5608369147082976032, guid: 7a3aefa7d24024458bb751ebb7dfb1cc, type: 3}
+  - {fileID: 8336435760349707588, guid: 567ec9cbd62d24be69e17b3ea0c85f7a, type: 3}
+  - {fileID: 1926556218664441711, guid: 89a384bc8ee144811841a0040dbcebab, type: 3}
 --- !u!114 &7195259298402465828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 10
+  target: {fileID: 0}
 --- !u!114 &3877209358667222924
 MonoBehaviour:
   m_ObjectHideFlags: 0

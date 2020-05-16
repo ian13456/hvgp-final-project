@@ -8,7 +8,6 @@ public class Equipment : Item
     public EquipmentSlot equipSlot;
     public SkinnedMeshRenderer mesh;
     public EquipmentMeshRegion[] coveredMeshRegions;
-    public GameObject lootPrefab;
 
     public int armorModifier;
     public int damageModifier;

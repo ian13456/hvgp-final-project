@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 10
+  target: {fileID: 0}
 --- !u!114 &-515773091991107360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +162,12 @@ MonoBehaviour:
     baseValue: 10
   armor:
     baseValue: 5
+  dropRate: 0.2
+  drop:
+  - {fileID: 1926556218664441711, guid: 89a384bc8ee144811841a0040dbcebab, type: 3}
+  - {fileID: 2400671256690480066, guid: a1027c7e48dcf491f99343324eaa5b15, type: 3}
+  - {fileID: 8336435760349707588, guid: 567ec9cbd62d24be69e17b3ea0c85f7a, type: 3}
+  - {fileID: 3512128517309802921, guid: ade6286b6e34c42e1a5d571175294786, type: 3}
 --- !u!114 &-6296713922279971416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 20
+  target: {fileID: 0}
 --- !u!136 &203486220385112709
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -230,6 +238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRate: 1
+  weaponSFX: {fileID: 0}
+  punchSFX: {fileID: 0}
 --- !u!1 &5634629033100736379
 GameObject:
   m_ObjectHideFlags: 0
