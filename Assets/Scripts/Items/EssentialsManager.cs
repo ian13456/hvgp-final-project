@@ -29,7 +29,7 @@ public class EssentialsManager : MonoBehaviour
     CameraController cameraController;
 
     int essentialsCount = 0;
-    string baseCountText = "Field Disruptors Needed: ";
+    string baseCountText = "";
     string releaseMessage = "T-REX BOSS RELEASED!";
 
     void Start()

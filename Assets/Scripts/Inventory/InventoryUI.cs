@@ -17,6 +17,11 @@ public class InventoryUI : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            inventoryUI.SetActive(false);
+        }
+
         if (Input.GetButtonDown("Inventory"))
         {
             Toggle();

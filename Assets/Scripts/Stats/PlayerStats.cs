@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerStats : CharacterStats
 {
+    public TextMeshProUGUI armorText;
+    public TextMeshProUGUI damageText;
+
     void Start()
     {
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
+        UpdateText();
     }
 
     void OnEquipmentChanged(Equipment newItem, Equipment oldItem)
@@ -22,6 +27,14 @@ public class PlayerStats : CharacterStats
             armor.RemoveModifier(oldItem.armorModifier);
             damage.RemoveModifier(oldItem.damageModifier);
         }
+
+        UpdateText();
+    }
+
+    void UpdateText()
+    {
+        armorText.text = armor.GetValue().ToString();
+        damageText.text = damage.GetValue().ToString();
     }
 
     public override void Die()
