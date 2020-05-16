@@ -22,6 +22,7 @@ public class Inventory : MonoBehaviour
 
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
+    public AudioSource pickupSFX;
 
     public int space = 20;
 
@@ -37,6 +38,7 @@ public class Inventory : MonoBehaviour
                 return false;
             }
             items.Add(item);
+            pickupSFX.Play();
 
             if (onItemChangedCallback != null)
                 onItemChangedCallback.Invoke();

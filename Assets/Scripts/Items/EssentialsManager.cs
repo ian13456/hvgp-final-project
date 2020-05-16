@@ -22,6 +22,7 @@ public class EssentialsManager : MonoBehaviour
     public TextMeshProUGUI releaseText;
     public AudioClip bossLevel;
     public AudioSource bgm;
+    public AudioSource trexReleaseSFX;
     public InventoryUI inventory;
     public Vector3 offset;
 
@@ -48,7 +49,6 @@ public class EssentialsManager : MonoBehaviour
         if (essentialsCount == essentialsRequirement)
         {
             // Camera Transition
-            Destroy(countText);
             StartCoroutine(ReleaseRex());
             StartCoroutine(ReleaseAlert());
         }
@@ -68,6 +68,7 @@ public class EssentialsManager : MonoBehaviour
         Destroy(forceField.gameObject);
         rex.GetComponent<NavMeshAgent>().enabled = true;
         rex.GetComponent<WanderController>().enabled = true;
+        trexReleaseSFX.Play();
 
         yield return new WaitForSeconds(3f);
 
@@ -89,6 +90,8 @@ public class EssentialsManager : MonoBehaviour
 
     void UpdateCounts()
     {
-        countText.text = baseCountText + (essentialsRequirement - essentialsCount);
+        int count = essentialsRequirement - essentialsCount;
+        if (count < 0) return;
+        countText.text = baseCountText + count;
     }
 }

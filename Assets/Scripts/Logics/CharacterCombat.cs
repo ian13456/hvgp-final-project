@@ -6,6 +6,9 @@ using UnityEngine;
 public class CharacterCombat : MonoBehaviour
 {
     public float attackRate = 1f;
+    public AudioSource weaponSFX;
+    public AudioSource punchSFX;
+
     private float attackCountdown = 0f;
 
     public event System.Action OnAttack;
@@ -42,7 +45,16 @@ public class CharacterCombat : MonoBehaviour
 
     IEnumerator DoDamage(CharacterStats stats, float delay)
     {
+        if (weaponSFX != null && punchSFX != null)
+        {
+            if (EquipmentManager.instance.hasWeapon())
+                weaponSFX.Play();
+            else
+                punchSFX.Play();
+        }
+
         yield return new WaitForSeconds(delay);
+
         enemyStats.TakeDamage(myStats.damage.GetValue(), gameObject);
     }
 }

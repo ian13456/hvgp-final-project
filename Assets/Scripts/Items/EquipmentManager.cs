@@ -19,6 +19,8 @@ public class EquipmentManager : MonoBehaviour
     public Transform chestplate;
     public Transform arms;
     public Transform legs;
+    public AudioSource equipSFX;
+    public AudioSource unequipSFX;
 
     Equipment[] currentEquipment;
     SkinnedMeshRenderer[] currentMeshes;
@@ -58,6 +60,11 @@ public class EquipmentManager : MonoBehaviour
 
         currentEquipment[slotIndex] = newItem;
         Debug.Log(newItem.name + " equipped!");
+
+        if (newItem.equipSlot != EquipmentSlot.Weapon)
+        {
+            equipSFX.Play();
+        }
 
         if (newItem.mesh)
         {
@@ -104,6 +111,11 @@ public class EquipmentManager : MonoBehaviour
 
     public void Unequip(int slotIndex)
     {
+        if (slotIndex != (int)EquipmentSlot.Weapon)
+        {
+            unequipSFX.Play();
+        }
+
         Equipment oldItem = currentEquipment[slotIndex];
         if (oldItem != null)
         {
@@ -128,6 +140,11 @@ public class EquipmentManager : MonoBehaviour
         {
             Unequip(i);
         }
+    }
+
+    public bool hasWeapon()
+    {
+        return currentEquipment[(int)EquipmentSlot.Weapon] != null;
     }
 
     void Update()
