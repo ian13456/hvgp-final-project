@@ -5,14 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public TransitionController transitionController;
+
     public void PlayGame()
     {
-        SceneManager.LoadScene(2);
+        transitionController.FadeToLevel(2);
     }
 
     public void PlayStory()
     {
-        SceneManager.LoadScene(1);
+        transitionController.FadeToLevel(1);
     }
 
     public void QuitGame()

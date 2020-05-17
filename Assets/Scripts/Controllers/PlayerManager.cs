@@ -15,6 +15,7 @@ public class PlayerManager : MonoBehaviour
     #endregion   
 
     public GameObject player;
+    public TransitionController transitionController;
 
     Animator animator;
 
@@ -36,6 +37,6 @@ public class PlayerManager : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         // Change Scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        transitionController.FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

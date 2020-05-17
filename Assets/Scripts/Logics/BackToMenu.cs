@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class BackToMenu : MonoBehaviour
 {
+    public TransitionController transitionController;
+
     public void Menu()
     {
-        SceneManager.LoadScene(0);
+        transitionController.FadeToLevel(0);
     }
 }

@@ -43,3 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 362d7413bd9b64b5ca4608342ec78c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionController: {fileID: 0}
