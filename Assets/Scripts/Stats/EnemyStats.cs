@@ -22,7 +22,7 @@ public class EnemyStats : CharacterStats
         // Add loot
     }
 
-    GameObject RandomDrop()
+    protected GameObject RandomDrop()
     {
         return drop[Random.Range(0, drop.Length - 1)];
     }

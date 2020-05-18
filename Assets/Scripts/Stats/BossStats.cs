@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class BossStats : EnemyStats
 {
-    public GameObject villain;
-    public float delay = 5f;
+    public TransitionController transitionController;
+    public float delay = 3f;
 
     public override void Die()
     {
-        base.Die();
+        if (drop.Length != 0)
+            if (Random.Range(0.0f, 1.0f) < dropRate)
+                Instantiate(base.RandomDrop(), transform.position, Quaternion.identity);
 
         // DO THE TRANSITIONS HERE;
         StartCoroutine(EndGame());
@@ -18,10 +20,12 @@ public class BossStats : EnemyStats
 
     IEnumerator EndGame()
     {
-        villain.SetActive(true);
+        gameObject.SetActive(false);
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(5);
 
         // Transition to TO BE CONTINUED
+        transitionController.FadeToLevel(5);
+
+        Destroy(gameObject);
     }
 }
