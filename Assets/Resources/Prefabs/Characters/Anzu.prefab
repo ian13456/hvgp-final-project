@@ -162,7 +162,7 @@ MonoBehaviour:
     baseValue: 10
   armor:
     baseValue: 5
-  dropRate: 0.2
+  dropRate: 0.6
   drop:
   - {fileID: 1926556218664441711, guid: 89a384bc8ee144811841a0040dbcebab, type: 3}
   - {fileID: 2400671256690480066, guid: a1027c7e48dcf491f99343324eaa5b15, type: 3}

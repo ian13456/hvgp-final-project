@@ -47,7 +47,7 @@ public class EssentialsManager : MonoBehaviour
     {
         if (isBossDefeated)
         {
-            directionalLight.intensity = Mathf.Lerp(directionalLight.intensity, 0.2f, 0.6f);
+            // directionalLight.intensity = Mathf.Lerp(directionalLight.intensity, 0.2f, 0.6f);
         }
     }
 

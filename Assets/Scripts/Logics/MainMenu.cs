@@ -17,6 +17,11 @@ public class MainMenu : MonoBehaviour
         transitionController.FadeToLevel(1);
     }
 
+    public void PlayInstructions()
+    {
+        transitionController.FadeToLevel(4);
+    }
+
     public void QuitGame()
     {
         Application.Quit();
