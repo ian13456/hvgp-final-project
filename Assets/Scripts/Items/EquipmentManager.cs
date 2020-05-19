@@ -72,6 +72,8 @@ public class EquipmentManager : MonoBehaviour
 
             if (newItem != null && newItem.equipSlot == EquipmentSlot.Weapon)
             {
+                newMesh.transform.parent = targetMesh.transform;
+                newMesh.bones = targetMesh.bones;
                 newMesh.rootBone = sword;
             }
             else if (newItem != null && newItem.equipSlot == EquipmentSlot.Chest)
