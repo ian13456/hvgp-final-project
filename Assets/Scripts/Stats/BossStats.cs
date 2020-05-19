@@ -20,7 +20,8 @@ public class BossStats : EnemyStats
 
     IEnumerator EndGame()
     {
-        gameObject.SetActive(false);
+        damage.RemoveModifier(-100);
+        GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
         yield return new WaitForSeconds(delay);
 
         // Transition to TO BE CONTINUED
